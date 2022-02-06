@@ -10,7 +10,7 @@ int main()
     bool Compare = x == 5;
     if(Compare)
     {
-        for (int i = 0; i<5 ; i++)
+        for (int i = 0; i<x ; i++)
         {
             Log("Hello World!!!");
         }
