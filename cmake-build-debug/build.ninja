@@ -90,6 +90,12 @@ build CMakeFiles/cpp.dir/dev/HelloWorld/src/Math.cpp.o: CXX_COMPILER__cpp_Debug 
   OBJECT_DIR = CMakeFiles/cpp.dir
   OBJECT_FILE_DIR = CMakeFiles/cpp.dir/dev/HelloWorld/src
 
+build CMakeFiles/cpp.dir/dev/HelloWorld/src/StarPyramid.cpp.o: CXX_COMPILER__cpp_Debug /home/flightman/programming/cpp/dev/HelloWorld/src/StarPyramid.cpp || cmake_object_order_depends_target_cpp
+  DEP_FILE = CMakeFiles/cpp.dir/dev/HelloWorld/src/StarPyramid.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles/cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/cpp.dir/dev/HelloWorld/src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target cpp
@@ -98,7 +104,7 @@ build CMakeFiles/cpp.dir/dev/HelloWorld/src/Math.cpp.o: CXX_COMPILER__cpp_Debug 
 #############################################
 # Link the executable cpp
 
-build cpp: CXX_EXECUTABLE_LINKER__cpp_Debug CMakeFiles/cpp.dir/dev/HelloWorld/src/Log.cpp.o CMakeFiles/cpp.dir/dev/HelloWorld/src/Main.cpp.o CMakeFiles/cpp.dir/dev/HelloWorld/src/Math.cpp.o
+build cpp: CXX_EXECUTABLE_LINKER__cpp_Debug CMakeFiles/cpp.dir/dev/HelloWorld/src/Log.cpp.o CMakeFiles/cpp.dir/dev/HelloWorld/src/Main.cpp.o CMakeFiles/cpp.dir/dev/HelloWorld/src/Math.cpp.o CMakeFiles/cpp.dir/dev/HelloWorld/src/StarPyramid.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/cpp.dir
   POST_BUILD = :

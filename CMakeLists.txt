@@ -6,4 +6,4 @@ set(CMAKE_CXX_STANDARD 14)
 add_executable(cpp
         dev/HelloWorld/src/Log.cpp
         dev/HelloWorld/src/Main.cpp
-        dev/HelloWorld/src/Math.cpp dev/HelloWorld/src/log..h)
+        dev/HelloWorld/src/Math.cpp dev/HelloWorld/src/Log.h dev/HelloWorld/src/StarPyramid.cpp)
