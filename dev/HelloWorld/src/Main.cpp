@@ -1,23 +1,30 @@
 #include<iostream>
-#include "Log.h"
-using namespace std;
+//using namespace std;
+void Log(const char* message);
+int Multiply(int a, int b);
 
-void StarPyramid(char ch, int n);
+int MultiplyAndLog(int a, int b)
+{
+	int result = a*b;
+	std::cout<<result<<std::endl;
+}
+class Player{
+public:
+    int x,y;
+    int speed;
+    void move(int xa, int ya){
+        x += (xa * speed);
+        y += (ya * speed);
+    }
+};
+
 
 int main()
 {
-    int x = 5;
-    char str = '*';
-    bool Compare = x == 5;
-    if(Compare)
-    {
-        for (int i = 0; i<x ; i++)
-        {
-            //Log("Hello World!!!");
-        }
-    }
-    cout<<string(str,3);
-    StarPyramid(str,9);
-    std::cin.get();
+    Player player;
+    player.x = 4;
+    player.y = 8;
+    player.speed = 33;
+    player.move(4 ,5);
     return 0;
 }
