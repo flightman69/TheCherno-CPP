@@ -1,30 +1,42 @@
-#include<iostream>
-//using namespace std;
-void Log(const char* message);
-int Multiply(int a, int b);
+#include <iostream>
 
-int MultiplyAndLog(int a, int b)
-{
-	int result = a*b;
-	std::cout<<result<<std::endl;
-}
-class Player{
+class  Log{
 public:
-    int x,y;
-    int speed;
-    void move(int xa, int ya){
-        x += (xa * speed);
-        y += (ya * speed);
+    int LogLevelError = 0;
+    int LogLevelWarning = 1;
+    int LogLevelInfo = 2;
+private:
+    int m_LogLevel;
+public:
+    void SetLogLevel(int level)
+    {
+        m_LogLevel = level;
     }
-};
+    void Error(const char* message)
+    {
+        if (m_LogLevel >= LogLevelError)
+            std::cout<< "[ERROR]:" << message << std::endl;
+    }
+    void Warn(const char* message)
+    {
+        if (m_LogLevel >= LogLevelWarning)
+            std::cout<< "[WARNING]:"<< message << std::endl;
+    }
 
+    void Info(const char* message)
+    {
+        if (m_LogLevel >= LogLevelInfo)
+            std::cout<< "[INFO]:" << message << std::endl;
+    }
+
+};
 
 int main()
 {
-    Player player;
-    player.x = 4;
-    player.y = 8;
-    player.speed = 33;
-    player.move(4 ,5);
-    return 0;
+    Log log;
+    log.SetLogLevel(log.LogLevelInfo);
+    log.Warn("WARNINGGGG!!!!");
+    log.Error("ERRRORRRR!!!!");
+    log.Info("Info :)");
+
 }
