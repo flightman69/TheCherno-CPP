@@ -31,6 +31,19 @@ public:
 
 };
 
+struct Entitty
+{
+    static int x ,y ;
+
+    void Print()
+    {
+        std::cout<<x<<','<<y<<std::endl;
+    }
+};
+
+int Entitty::x;
+int Entitty::y;
+
 int main()
 {
     Log log;
@@ -38,5 +51,13 @@ int main()
     log.Warn("WARNINGGGG!!!!");
     log.Error("ERRRORRRR!!!!");
     log.Info("Info :)");
+    Entitty E;
+    E.x = 5;
+    E.y = 10;
+    Entitty E2;
+    E2.x = 55;
+    E2.y = 100;
+    E.Print();
+    E2.Print();
 
 }
